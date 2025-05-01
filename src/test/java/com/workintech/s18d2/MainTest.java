@@ -4,7 +4,7 @@ import com.workintech.s18d2.entity.Fruit;
 import com.workintech.s18d2.entity.FruitType;
 import com.workintech.s18d2.entity.Vegetable;
 import com.workintech.s18d2.exceptions.PlantException;
-import com.workintech.s18d2.repository.FruitRepository;
+import com.workintech.s18d2.dao.FruitRepository;
 import com.workintech.s18d2.services.FruitServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -82,7 +82,7 @@ class MainTest {
 
         assertEquals(1L, fruit.getId());
         assertEquals("Apple", fruit.getName());
-        assertEquals(15.0, fruit.getPrice());
+        assertEquals(15, fruit.getPrice());
         assertEquals(FruitType.SWEET, fruit.getFruitType());
     }
 
@@ -110,7 +110,7 @@ class MainTest {
 
         assertEquals(2L, vegetable.getId());
         assertEquals("Carrot", vegetable.getName());
-        assertEquals(20.0, vegetable.getPrice());
+        assertEquals(20, vegetable.getPrice());
         assertFalse(vegetable.isGrownOnTree());
 
 
